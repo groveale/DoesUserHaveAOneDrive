@@ -53,6 +53,7 @@ namespace DoesUserHaveOneDrive
         {
             string personalSpace = DoesUserAlreadyHaveAOneDrive(getContext(), userTocheck);
 
+            // If a user does not have a OneDrive provisioned then their PersonalURL property will contain the substring "Person.aspx?accountname"
             if (personalSpace.Contains("Person.aspx?accountname"))
             {
                 Console.WriteLine("No OneDrive found for this user");
